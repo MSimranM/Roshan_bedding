@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <script defer>
+        let users = [{
+                name: "Rajneesh",
+                age: 34,
+                address: {
+                    local: "22 Alaknanda",
+                    city: "Dehradun",
+                    state: "UK",
+                },
+                orders: [{
+                    id: 1,
+                    name: "GOT Book Series"
+                }],
+            },
+            {
+                name: "Bhavesh",
+                age: 37,
+                address: {
+                    local: "48 DT Row",
+                    city: "Hyderabad",
+                    state: "AP",
+                },
+            },
+            {
+                name: "Jasbir",
+                age: 38,
+                address: {
+                    local: "196 Lama Bhavan",
+                    city: "Gangtok",
+                    state: "Sikkim",
+                },
+                orders: [{
+                        id: 1,
+                        name: "Chair"
+                    },
+                    {
+                        id: 2,
+                        name: "PS5"
+                    },
+                ],
+            },
+        ];
+    </script>
+    <script id='solution'>
+        function updateUsers(users, userObject, item) {
+            //write your code here
+            const userexist = users.findIndex((user)=>user.name===userObject.name);
+            if(userexist===-1)
+            {
+                const newuser = {...userObject,orders:[{id:1,name:item}]};
+                users.push(newuser);
+            }
+            else{
+                if(!userexist.orders)
+                {
+                    userexist.orders.push([{id:1,name:item}])
+                }
+                else{
+                    const orderexit =userexist.orders.length;
+                    userexist.orders.push({id:orderexit+1,name:item});
+                }
+            }
+            return users;    
+        }
+
+        function aclean(arr) {
+            // Write Code here ==========
+            let obj=new Object();
+            for(let i=0;i<arr.length;i++)
+            {
+                let sorted= arr[i].toLowerCase().split('').sort().join();
+                if(!obj[sorted])
+                {
+                    obj.push(sorted)
+                }
+            }
+        }
+        
+    </script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <script id='solution'>
+        function ConvertToBinary(dec) {
+            //write your code here
+            let bin ='';
+            while(dec/2!=0)
+            {
+                let rem=Math.floor(dec%2);
+                let q=Math.floor(dec/2);
+                bin=bin.concat(rem);
+                dec=q;
+            }
+            return bin.toString().split('').reverse().join('');
+        }
+        console.log(ConvertToBinary(42));
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <script id='solution'>
+        function ConvertToBinary(dec) {
+            //write your code here
+            let bin ='';
+            while(dec/2!=0)
+            {
+                let rem=Math.floor(dec%2);
+                let q=Math.floor(dec/2);
+                bin=bin.concat(rem);
+                dec=q;
+            }
+            return bin.toString().split('').reverse().join('');
+        }
+        console.log(ConvertToBinary(42));
+    </script>
+</body>
+
+</html>
