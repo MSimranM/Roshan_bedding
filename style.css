@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2E2E50;
+    color: white;
+}
+
+.main {
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    background-image: url('./imgs/Roshanbeding1.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    height: 35vh;
+}
+
+header {
+    background-color: #2E2E50;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #2E2E50;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.products {
+    text-align: center;
+    background-color: #2E2E50;
+}
+
+.products h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.item {
+    background-color: #2E2E50;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    overflow: hidden; /* Ensures uniform image sizing */
+}
+
+.item img {
+    width: 100%; /* Make images scale to container width */
+    height: 300px; /* Set a fixed height for all images */
+    object-fit: cover; /* Crop images to fit without distortion */
+    border-radius: 8px;
+}
+.grid{
+display: grid;
+grid-template-columns : 3fr 3fr 3fr;
+grid-template-rows : 1fr 1fr 1fr;
+gap: 10px;
+}
+
+.about
+{
+    background-color: white;
+    font-style: italic ;
+    font-family:Arial, Helvetica, sans-serif ;
+    color: #2E2E50;
+    text-align: center;
+    align-items: center;
+}
+
+.about img
+{
+    height: 30px;
+    margin-right: 10px;
+}
